@@ -1,4 +1,7 @@
-push is the first line
-push
+
+push 9
       
+          k
+	a
+       
 

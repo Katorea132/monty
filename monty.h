@@ -57,6 +57,9 @@ void opcoder();
 
 /* In aux.c */
 void WilliamWallace(char **Liberty);
+stack_t *add_nodeint(stack_t **stack, int n);
+void MasterWilliamWallace(int iffy);
+void WilliamListallace(void);
 
 /* In opcodes.c */
 void push(stack_t **stack, unsigned int linen);

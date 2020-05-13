@@ -22,8 +22,7 @@ void opcoder()
 		}
 	}
 	fprintf(stderr, "L%u: unkown instruction %s\n", lili.linen, lili.comm[0]);
-	fclose(lili.file);
-	WilliamWallace(lili.comm), free(lili.line), exit (EXIT_FAILURE);
+	MasterWilliamWallace(1), exit (EXIT_FAILURE);
 }
 /**
  * commandizer - Commandizes the first 2 instructions into opcodes
@@ -69,6 +68,6 @@ int main(int argc, char *av[])
 		WilliamWallace(lili.comm);
 		printf("%u\n", lili.linen);
 	}
-	free(lili.line), fclose(lili.file);
+	MasterWilliamWallace(0);
 	return (EXIT_SUCCESS);
 }
