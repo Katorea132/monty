@@ -14,7 +14,8 @@ void opcoder(void)
 	};
 	if (!lili.comm[0])
 		return;
-
+	if (lili.comm[0][0] == '#')
+		return;
 	for (i = 0; codes[i].opcode; i++)
 	{
 		if (strcmp(codes[i].opcode, lili.comm[0]) == 0)
