@@ -72,3 +72,28 @@ void pop(stack_t **stack, unsigned int linen)
 	fprintf(stderr, "L%u: can't pop an empty stack\n", linen);
 	MasterWilliamWallace(1), exit(EXIT_FAILURE);
 }
+/**
+ * swap - Swaps first 2 elements
+ * @stack: Holds the head of the stack
+ * @linen: Holds the number of the line
+ * Return: none
+ */
+void swap(stack_t **stack, unsigned int linen)
+{
+	stack_t *tmp1 = *stack, *tmp2;
+	int swapperonie;
+
+	if (tmp1)
+	{
+		tmp2 = tmp1->next;
+		if (tmp2)
+		{
+			swapperonie = tmp1->n;
+			tmp1->n = tmp2->n;
+			tmp2->n = swapperonie;
+			return;
+		}
+	}
+	fprintf(stderr, "L%u: can't swap, stack too short\n", linen);
+	MasterWilliamWallace(1), exit(EXIT_FAILURE);
+}

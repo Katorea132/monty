@@ -70,5 +70,6 @@ void push(stack_t **stack, unsigned int linen);
 void pall(stack_t **stack, unsigned int linen);
 void pint(stack_t **stack, unsigned int linen);
 void pop(stack_t **stack, unsigned int linen);
+void swap(stack_t **stack, unsigned int linen);
 
 #endif /* for MONTICO */
