@@ -79,4 +79,7 @@ void sub(stack_t **stack, unsigned int linen);
 void _div(stack_t **stack, unsigned int linen);
 void mul(stack_t **stack, unsigned int linen);
 
+/* In opcodes2.c */
+void mod(stack_t **stack, unsigned int linen);
+
 #endif /* for MONTICO */
