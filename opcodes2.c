@@ -52,3 +52,26 @@ void pchar(stack_t **stack, unsigned int linen)
 	fprintf(stderr, "L%u: can't pchar, stack empty\n", linen);
 	MasterWilliamWallace(1), exit(EXIT_FAILURE);
 }
+/**
+ * pstr - prints the char at the top of the stack
+ * @stack: Holds the head of the stack
+ * @linen: Holds the number of the line
+ * Return: none
+ */
+void pstr(stack_t **stack, unsigned int linen)
+{
+	stack_t *tmp;
+
+	(void) linen;
+	if (*stack)
+	{
+		for (tmp = *stack; tmp; tmp = tmp->next)
+		{
+			if (tmp->n > 0 && tmp->n <= 127)
+				putchar(tmp->n);
+			else
+				break;
+		}
+	}
+	putchar('\n');
+}
