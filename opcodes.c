@@ -46,8 +46,9 @@ void push(stack_t **stack, unsigned int linen)
  */
 void pall(stack_t **stack, unsigned int linen)
 {
-	(void) linen;
 	stack_t *tmp = *stack;
+
+	(void) linen;
 
 	for (; tmp; tmp = tmp->next)
 		printf("%d\n", tmp->n);

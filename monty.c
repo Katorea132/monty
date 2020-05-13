@@ -51,11 +51,11 @@ char **commandizer(char **line)
  */
 int main(int argc, char *av[])
 {
-	lili.stack = 0;
 	ssize_t chars = 0;
 	size_t size = 0;
 
 	lili.linen = 0;
+	lili.stack = 0;
 
 	if (argc != 2)
 		fprintf(stderr, "%s", "USAGE: monty file\n"), exit(EXIT_FAILURE);
