@@ -9,7 +9,7 @@ void opcoder(void)
 	unsigned int i;
 	instruction_t codes[] = {
 		{"push", push}, {"pall", pall}, {"pint", pint}, {"pop", pop},
-		{"swap", swap}, {0, 0}
+		{"swap", swap}, {"add", add}, {0, 0}
 	};
 	if (!lili.comm[0])
 		return;
