@@ -77,5 +77,6 @@ void add(stack_t **stack, unsigned int linen);
 void nop(stack_t **stack, unsigned int linen);
 void sub(stack_t **stack, unsigned int linen);
 void _div(stack_t **stack, unsigned int linen);
+void mul(stack_t **stack, unsigned int linen);
 
 #endif /* for MONTICO */
