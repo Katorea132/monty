@@ -1,22 +1,40 @@
 #include "monty.h"
+/**
+ * push - Pushes to the stack/Queue the given value if valid
+ * @stack: Holds the head of the stack
+ * @linen: Holds the number of the line
+ * Return: none
+ */
 void push(stack_t **stack, unsigned int linen)
 {
-	int num;
+	int num, i, chk = 2;
 
 	if (lili.comm[1] != 0)
 	{
-		if (strcmp("0", lili.comm[1]) == 0)
+		for (i = 0; lili.comm[1][i]; i++)
 		{
-			num = 0;
-			add_nodeint(stack, num);
-			return;
+			if (!(lili.comm[1][i] >= '0' &&
+			lili.comm[1][i] <= '9') && (lili.comm[1][i] != '-'))
+			{
+				printf("%c\n", lili.comm[1][i]);
+				chk = 1;
+			}
 		}
-		else if((num = atoi(lili.comm[1]) != 0))
+		if (chk != 1)
 		{
-			add_nodeint(stack, num);
-			return;
+			num = atoi(lili.comm[1]);
+			if (strcmp("0", lili.comm[1]) == 0)
+			{
+				add_nodeint(stack, 0);
+				return;
+			}
+			else if (num != 0)
+			{
+				add_nodeint(stack, num);
+				return;
+			}
 		}
 	}
 	fprintf(stderr, "L%u: usage: push integer\n", linen);
-	MasterWilliamWallace(1), exit (EXIT_FAILURE);
+	MasterWilliamWallace(1), exit(EXIT_FAILURE);
 }

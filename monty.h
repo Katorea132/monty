@@ -35,12 +35,12 @@ typedef struct instruction_s
 	void (*f)(stack_t **stack, unsigned int line_number);
 } instruction_t;
 /**
- * struct h - Holds all that I need to carry around
+ * struct holdertron - Holds all that I need to carry around
  * @file: Holds the opened file
  * @line: Holds the line gotten by getline
  * @linen: Command line
  * @stack: The stack or queue to be used
- * @command: The array holding the op code and value
+ * @comm: The array holding the op code and value
  */
 typedef struct holdertron
 {
@@ -53,7 +53,7 @@ typedef struct holdertron
 extern holdy lili;
 /* In monty.c */
 char **commandizer(char **line);
-void opcoder();
+void opcoder(void);
 
 /* In aux.c */
 void WilliamWallace(char **Liberty);

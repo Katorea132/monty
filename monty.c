@@ -4,7 +4,7 @@ holdy lili;
  * opcoder - Searches for the opcode
  * Return: none
  */
-void opcoder()
+void opcoder(void)
 {
 	unsigned int i;
 	instruction_t codes[] = {
@@ -15,14 +15,14 @@ void opcoder()
 
 	for (i = 0; codes[i].opcode; i++)
 	{
-		if(strcmp(codes[i].opcode, lili.comm[0]) == 0)
+		if (strcmp(codes[i].opcode, lili.comm[0]) == 0)
 		{
 			codes[i].f(&lili.stack, lili.linen);
 			return;
 		}
 	}
 	fprintf(stderr, "L%u: unkown instruction %s\n", lili.linen, lili.comm[0]);
-	MasterWilliamWallace(1), exit (EXIT_FAILURE);
+	MasterWilliamWallace(1), exit(EXIT_FAILURE);
 }
 /**
  * commandizer - Commandizes the first 2 instructions into opcodes
@@ -54,6 +54,7 @@ int main(int argc, char *av[])
 	lili.stack = 0;
 	ssize_t chars = 0;
 	size_t size = 0;
+
 	lili.linen = 0;
 
 	if (argc != 2)

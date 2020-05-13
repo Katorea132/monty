@@ -53,7 +53,7 @@ stack_t *add_nodeint(stack_t **stack, int n)
 		lili->prev = 0;
 		return (lili);
 	}
-	fprintf(stderr, "Error: malloc failed"), exit (EXIT_FAILURE);
+	fprintf(stderr, "Error: malloc failed"), exit(EXIT_FAILURE);
 }
 /**
  * WilliamListallace - FREES lists

@@ -1,6 +1,7 @@
 
 push 9
-      
+push -9
+push 0
           k
 	a
        
