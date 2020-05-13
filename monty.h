@@ -83,5 +83,6 @@ void mul(stack_t **stack, unsigned int linen);
 void mod(stack_t **stack, unsigned int linen);
 void pchar(stack_t **stack, unsigned int linen);
 void pstr(stack_t **stack, unsigned int linen);
+void rotl(stack_t **stack, unsigned int linen);
 
 #endif /* for MONTICO */

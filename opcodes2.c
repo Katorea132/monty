@@ -75,3 +75,26 @@ void pstr(stack_t **stack, unsigned int linen)
 	}
 	putchar('\n');
 }
+/**
+ * rotl - Rotates the stack to the top
+ * @stack: Holds the head of the stack
+ * @linen: Holds the number of the line
+ * Return: none
+ */
+void rotl(stack_t **stack, unsigned int linen)
+{
+	stack_t *tmp;
+	int holdy;
+
+	(void) linen;
+	if (*stack)
+	{
+		tmp = (*stack)->next;
+		if (tmp)
+		{
+			holdy = (*stack)->n;
+			delete_nodeIndx(stack, 0);
+			add_nodeintend(stack, holdy);
+		}
+	}
+}
