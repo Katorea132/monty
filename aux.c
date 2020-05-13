@@ -53,7 +53,7 @@ stack_t *add_nodeintend(stack_t **stack, int n)
 		lili->prev = 0;
 		return (lili);
 	}
-	fprintf(stderr, "Error: malloc failed"), MasterWilliamWallace(1);
+	fprintf(stderr, "Error: malloc failed\n"), MasterWilliamWallace(1);
 	exit(EXIT_FAILURE);
 }
 /**
@@ -93,6 +93,6 @@ stack_t *add_nodeint(stack_t **stack, int n)
 		*stack = lili;
 		return (lili);
 	}
-	fprintf(stderr, "Error: malloc failed"), MasterWilliamWallace(1);
+	fprintf(stderr, "Error: malloc failed\n"), MasterWilliamWallace(1);
 	exit(EXIT_FAILURE);
 }
