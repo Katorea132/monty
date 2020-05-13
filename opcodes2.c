@@ -22,7 +22,7 @@ void mod(stack_t **stack, unsigned int linen)
 				fprintf(stderr, "L%u: division by zero\n", linen);
 				MasterWilliamWallace(1), exit(EXIT_FAILURE);
 			}
-			c = a / b;
+			c = a % b;
 			tmp->n = c;
 			delete_nodeIndx(stack, 0);
 			return;
