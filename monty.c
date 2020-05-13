@@ -67,8 +67,8 @@ int main(int argc, char *av[])
 		fprintf(stderr, "Error: Can't open file %s\n", av[1]), exit(EXIT_FAILURE);
 	while ((chars = getline(&lili.line, &size, lili.file)) != -1)
 	{
-		lili.linen++, lili.comm = commandizer(&lili.line);
-		opcoder();
+		lili.linen++;
+		lili.comm = commandizer(&lili.line), opcoder();
 		WilliamWallace(lili.comm);
 	}
 	MasterWilliamWallace(0);

@@ -16,23 +16,14 @@ void push(stack_t **stack, unsigned int linen)
 			if (!(lili.comm[1][i] >= '0' &&
 			lili.comm[1][i] <= '9') && (lili.comm[1][i] != '-'))
 			{
-				printf("%c\n", lili.comm[1][i]);
 				chk = 1;
 			}
 		}
 		if (chk != 1)
 		{
 			num = atoi(lili.comm[1]);
-			if (strcmp("0", lili.comm[1]) == 0)
-			{
-				add_nodeint(stack, 0);
-				return;
-			}
-			else if (num != 0)
-			{
-				add_nodeint(stack, num);
-				return;
-			}
+			add_nodeint(stack, num);
+			return;
 		}
 	}
 	fprintf(stderr, "L%u: usage: push integer\n", linen);
