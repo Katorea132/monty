@@ -55,7 +55,7 @@ void sub(stack_t **stack, unsigned int linen)
 		{
 			a = tmp->n;
 			b = (*stack)->n;
-			c = b - a;
+			c = a - b;
 			tmp->n = c;
 			delete_nodeIndx(stack, 0);
 			return;
