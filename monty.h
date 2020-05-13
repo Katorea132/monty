@@ -65,5 +65,6 @@ void WilliamListallace(void);
 /* In opcodes.c */
 void push(stack_t **stack, unsigned int linen);
 void pall(stack_t **stack, unsigned int linen);
+void pint(stack_t **stack, unsigned int linen);
 
 #endif /* for MONTICO */
