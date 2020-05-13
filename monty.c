@@ -36,7 +36,10 @@ char **commandizer(char **line)
 
 	comm = malloc(sizeof(char *) * 3);
 	if (!comm)
-		fprintf(stderr, "Error: malloc failed\n"), exit(EXIT_FAILURE);
+	{
+		fprintf(stderr, "Error: malloc failed\n"), MasterWilliamWallace(1);
+		exit(EXIT_FAILURE);
+	}
 	comm[0] = 0, comm[1] = 0;
 	for (ar = 0, tok = strtok(line[0], " \n\t\v\f"); tok && ar <= 1; ar++)
 		comm[ar] = strdup(tok), tok = strtok(0, " \n\t\v\f");
@@ -58,10 +61,10 @@ int main(int argc, char *av[])
 	lili.stack = 0;
 
 	if (argc != 2)
-		fprintf(stderr, "%s", "USAGE: monty file\n"), exit(EXIT_FAILURE);
+		fprintf(stderr, "USAGE: monty file\n"), exit(EXIT_FAILURE);
 	lili.file = fopen(av[1], "r");
 	if (!lili.file)
-		fprintf(stderr, "Error can't open file %s\n", av[1]), exit(EXIT_FAILURE);
+		fprintf(stderr, "Error: Can't open file %s\n", av[1]), exit(EXIT_FAILURE);
 	while ((chars = getline(&lili.line, &size, lili.file)) != -1)
 	{
 		lili.linen++, lili.comm = commandizer(&lili.line);
