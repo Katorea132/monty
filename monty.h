@@ -62,9 +62,13 @@ stack_t *add_nodeint(stack_t **stack, int n);
 void MasterWilliamWallace(int iffy);
 void WilliamListallace(void);
 
+/* In aux1.c */
+int delete_nodeIndx(stack_t **stack, unsigned int index);
+
 /* In opcodes.c */
 void push(stack_t **stack, unsigned int linen);
 void pall(stack_t **stack, unsigned int linen);
 void pint(stack_t **stack, unsigned int linen);
+void pop(stack_t **stack, unsigned int linen);
 
 #endif /* for MONTICO */

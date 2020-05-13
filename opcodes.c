@@ -57,5 +57,18 @@ void pint(stack_t **stack, unsigned int linen)
 		return;
 	}
 	fprintf(stderr, "L%u: can't pint, stack empty\n", linen);
-	MasterWilliamWallace(1), exit (EXIT_FAILURE);	
+	MasterWilliamWallace(1), exit(EXIT_FAILURE);
+}
+/**
+ * pop - Removes the top level of the stack
+ * @stack: Holds the head of the stack
+ * @linen: Holds the number of the line
+ * Return: none
+ */
+void pop(stack_t **stack, unsigned int linen)
+{
+	if (delete_nodeIndx(stack, 0) == 1)
+		return;
+	fprintf(stderr, "L%u: can't pop an empty stack\n", linen);
+	MasterWilliamWallace(1), exit(EXIT_FAILURE);
 }

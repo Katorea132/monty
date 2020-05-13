@@ -1,8 +1,18 @@
 
-push 9
-push -9
-push 0
-          k
-	a
+push 1
+push 1024
+push -0
+pint
+pop
+pint
+pop
+pint
+pop
+pop
+push
+push -1
+push -1024
+pint
+push 123a
        
 
