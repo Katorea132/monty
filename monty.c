@@ -11,7 +11,7 @@ void opcoder(void)
 		{"push", push}, {"pall", pall}, {"pint", pint}, {"pop", pop},
 		{"swap", swap}, {"add", add}, {"nop", nop}, {"sub", sub},
 		{"div", _div}, {"mul", mul}, {"mod", mod}, {"pchar", pchar},
-		{"pstr", pstr}, {"rotl", rotl}, {0, 0}
+		{"pstr", pstr}, {"rotl", rotl}, {"rotr", rotr},  {0, 0}
 	};
 	if (!lili.comm[0])
 		return;

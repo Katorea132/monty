@@ -98,3 +98,28 @@ void rotl(stack_t **stack, unsigned int linen)
 		}
 	}
 }
+/**
+ * rotr - Rotates the stack to the top
+ * @stack: Holds the head of the stack
+ * @linen: Holds the number of the line
+ * Return: none
+ */
+void rotr(stack_t **stack, unsigned int linen)
+{
+	stack_t *tmp;
+	int holdy, i;
+
+	(void) linen;
+	if (*stack)
+	{
+		tmp = (*stack)->next;
+		if (tmp)
+		{
+			for (i = 1; tmp->next; tmp = tmp->next, i++)
+				;
+			holdy = tmp->n;
+			delete_nodeIndx(stack, i);
+			add_nodeint(stack, holdy);
+		}
+	}
+}
