@@ -26,3 +26,14 @@ void add(stack_t **stack, unsigned int linen)
 	fprintf(stderr, "L%u: can't add, stack too short\n", linen);
 	MasterWilliamWallace(1), exit(EXIT_FAILURE);
 }
+/**
+ * nop - nop
+ * @stack: nop
+ * @linen: nop
+ * Return: nope, chuck testa
+ */
+void nop(stack_t **stack, unsigned int linen)
+{
+	(void) stack;
+	(void) linen;
+}

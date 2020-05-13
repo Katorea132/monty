@@ -74,5 +74,6 @@ void swap(stack_t **stack, unsigned int linen);
 
 /* In opcodes1.c */
 void add(stack_t **stack, unsigned int linen);
+void nop(stack_t **stack, unsigned int linen);
 
 #endif /* for MONTICO */
