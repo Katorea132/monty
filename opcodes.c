@@ -38,3 +38,17 @@ void push(stack_t **stack, unsigned int linen)
 	fprintf(stderr, "L%u: usage: push integer\n", linen);
 	MasterWilliamWallace(1), exit(EXIT_FAILURE);
 }
+/**
+ * pall - Prints the stack/Queue
+ * @stack: Holds the head of the stack
+ * @linen: Holds the number of the line
+ * Return: none
+ */
+void pall(stack_t **stack, unsigned int linen)
+{
+	(void) linen;
+	stack_t *tmp = *stack;
+
+	for (; tmp; tmp = tmp->next)
+		printf("%d\n", tmp->n);
+}

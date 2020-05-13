@@ -8,7 +8,7 @@ void opcoder(void)
 {
 	unsigned int i;
 	instruction_t codes[] = {
-		{"push", push}, {0, 0}
+		{"push", push}, {"pall", pall}, {0, 0}
 	};
 	if (!lili.comm[0])
 		return;
@@ -21,7 +21,7 @@ void opcoder(void)
 			return;
 		}
 	}
-	fprintf(stderr, "L%u: unkown instruction %s\n", lili.linen, lili.comm[0]);
+	fprintf(stderr, "L%u: unknown instruction %s\n", lili.linen, lili.comm[0]);
 	MasterWilliamWallace(1), exit(EXIT_FAILURE);
 }
 /**
@@ -67,7 +67,6 @@ int main(int argc, char *av[])
 		lili.linen++, lili.comm = commandizer(&lili.line);
 		opcoder();
 		WilliamWallace(lili.comm);
-		printf("%u\n", lili.linen);
 	}
 	MasterWilliamWallace(0);
 	return (EXIT_SUCCESS);

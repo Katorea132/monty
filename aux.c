@@ -26,12 +26,12 @@ void MasterWilliamWallace(int iffy)
 	WilliamListallace();
 }
 /**
- * add_nodeint - Adds a node to the end of the given double linked list
+ * add_nodeintend - Adds a node to the end of the given double linked list
  * @stack: Holds the head
  * @n: Holds the number to add
  * Return: a pointer to the added node
  */
-stack_t *add_nodeint(stack_t **stack, int n)
+stack_t *add_nodeintend(stack_t **stack, int n)
 {
 	stack_t *tmp;
 	stack_t *lili = malloc(sizeof(stack_t));
@@ -53,7 +53,8 @@ stack_t *add_nodeint(stack_t **stack, int n)
 		lili->prev = 0;
 		return (lili);
 	}
-	fprintf(stderr, "Error: malloc failed"), exit(EXIT_FAILURE);
+	fprintf(stderr, "Error: malloc failed"), MasterWilliamWallace(1);
+	exit(EXIT_FAILURE);
 }
 /**
  * WilliamListallace - FREES lists
@@ -71,4 +72,27 @@ void WilliamListallace(void)
 		free(swappity);
 	}
 	free(lili.stack);
+}
+/**
+ * add_nodeint - Adds a node to the end of the given double linked list
+ * @stack: Holds the head
+ * @n: Holds the number to add
+ * Return: a pointer to the added node
+ */
+stack_t *add_nodeint(stack_t **stack, int n)
+{
+	stack_t *lili = malloc(sizeof(stack_t));
+
+	if (lili)
+	{
+		lili->n = n;
+		lili->prev = 0;
+		lili->next = *stack;
+		if (*stack)
+			(*stack)->prev = lili;
+		*stack = lili;
+		return (lili);
+	}
+	fprintf(stderr, "Error: malloc failed"), MasterWilliamWallace(1);
+	exit(EXIT_FAILURE);
 }

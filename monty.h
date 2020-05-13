@@ -57,11 +57,13 @@ void opcoder(void);
 
 /* In aux.c */
 void WilliamWallace(char **Liberty);
+stack_t *add_nodeintend(stack_t **stack, int n);
 stack_t *add_nodeint(stack_t **stack, int n);
 void MasterWilliamWallace(int iffy);
 void WilliamListallace(void);
 
 /* In opcodes.c */
 void push(stack_t **stack, unsigned int linen);
+void pall(stack_t **stack, unsigned int linen);
 
 #endif /* for MONTICO */
