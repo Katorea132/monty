@@ -7,7 +7,7 @@
  */
 void push(stack_t **stack, unsigned int linen)
 {
-	int num, i, chk = 2;
+	int i, chk = 2;
 
 	if (lili.comm[1] != 0)
 	{
@@ -21,8 +21,7 @@ void push(stack_t **stack, unsigned int linen)
 		}
 		if (chk != 1)
 		{
-			num = atoi(lili.comm[1]);
-			add_nodeint(stack, num);
+			add_nodeint(stack, atoi(lili.comm[1]));
 			return;
 		}
 	}
