@@ -40,7 +40,8 @@ typedef struct instruction_s
  * @line: Holds the line gotten by getline
  * @linen: Command line
  * @stack: The stack or queue to be used
- * @comm: The array holding the op code and value
+ * @comm: The array holding the op code
+ * @mode: Switch for modes
  */
 typedef struct holdertron
 {
@@ -49,6 +50,7 @@ typedef struct holdertron
 	unsigned int linen;
 	stack_t *stack;
 	char **comm;
+	int mode;
 } holdy;
 extern holdy lili;
 /* In monty.c */
@@ -85,5 +87,9 @@ void pchar(stack_t **stack, unsigned int linen);
 void pstr(stack_t **stack, unsigned int linen);
 void rotl(stack_t **stack, unsigned int linen);
 void rotr(stack_t **stack, unsigned int linen);
+
+/* In opcodes3.c */
+void stack(stack_t **stack, unsigned int linen);
+void queue(stack_t **stack, unsigned int linen);
 
 #endif /* for MONTICO */

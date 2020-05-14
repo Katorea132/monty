@@ -21,8 +21,16 @@ void push(stack_t **stack, unsigned int linen)
 		}
 		if (chk != 1)
 		{
-			add_nodeint(stack, atoi(lili.comm[1]));
-			return;
+			if (lili.mode == 1)
+			{
+				add_nodeint(stack, atoi(lili.comm[1]));
+				return;
+			}
+			else if (lili.mode == -1)
+			{
+				add_nodeintend(stack, atoi(lili.comm[1]));
+				return;
+			}
 		}
 	}
 	fprintf(stderr, "L%u: usage: push integer\n", linen);

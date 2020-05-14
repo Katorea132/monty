@@ -11,7 +11,8 @@ void opcoder(void)
 		{"push", push}, {"pall", pall}, {"pint", pint}, {"pop", pop},
 		{"swap", swap}, {"add", add}, {"nop", nop}, {"sub", sub},
 		{"div", _div}, {"mul", mul}, {"mod", mod}, {"pchar", pchar},
-		{"pstr", pstr}, {"rotl", rotl}, {"rotr", rotr},  {0, 0}
+		{"pstr", pstr}, {"rotl", rotl}, {"rotr", rotr}, {"stack", stack},
+		{"queue", queue}, {0, 0}
 	};
 	if (!lili.comm[0])
 		return;
@@ -63,6 +64,7 @@ int main(int argc, char *av[])
 
 	lili.linen = 0;
 	lili.stack = 0;
+	lili.mode = 1;
 
 	if (argc != 2)
 		fprintf(stderr, "USAGE: monty file\n"), exit(EXIT_FAILURE);
